@@ -7,12 +7,15 @@ export const SideBar = () => {
   const [internalIterator, setInternalIterator] = useState(0);
 
   return (
-    <div>
+    <div className="p-3 border w-full bg-orange-100" style={{ border: "1px solid red" }}>
       <p>Sidebar</p>
-      <button onClick={() => setInternalIterator(internalIterator + 1)}>
-        Internal Iterator: {internalIterator} | push to increment
+      <p>Internal sidebar state: {internalIterator} </p>
+      <button
+        className="bg-neutral-300 p-2"
+        onClick={() => setInternalIterator(internalIterator + 1)}
+      >
+        Click to increment
       </button>
-      <hr></hr>
     </div>
   );
 };
